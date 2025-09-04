@@ -1,0 +1,32 @@
+body{
+    background:url("whatsappbg.jpg");
+    margin-left:20px;
+}
+
+.chat{
+    background:#FCFFC1;
+    padding:20px;
+    border-radius:16px;
+    width:400px;
+}
+
+.msg{
+    background:#0F828C;
+    color:white;
+    padding:5px 15px;
+    border-radius:16px;
+}
+
+h2{
+    color:white;
+}
+
+input{
+    height:40px;
+    width:300px;
+}
+
+textarea{
+    height:50px;
+    width:400px;
+}

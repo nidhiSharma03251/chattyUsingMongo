@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chattty</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>All Chats</h2>
+    <form method="get" action="/chats/new">
+        <button style="position: absolute;top: 8px;
+  right: 16px; background-color:#FCFFC1; height: 40px; width: 150px; border:none; border-radius: 4px; ">Send new message</button>
+    </form>
+    <br>
+    <br>
+    <%for(let chat of chats){%>
+    <div class="chat">
+        <p>From: <i><%= chat.from %></i></p>
+        <div class="msg">
+            <p><%= chat.msg %></p>
+        </div>
+        <p>Received by: <i><%=chat.to%></i></p>
+        <hr>
+        <p><%=chat.created_at.toString().split(" ")[4] %></p>
+        <p><%=chat.created_at.toString().split(" ").splice(0,4).join("-")%></p>
+        <div style="display: flex; gap: 10px; margin-top: 5px;">
+            <form action="chats/<%=chat._id%>/edit"><button style="background:#0F828C; color:white; border: none; border-radius: 3px;">Edit message</button></form>
+        <form method="post" action="chats/<%=chat._id%>?_method=DELETE"><button id="deletebtn" style="background:#0F828C; color:white; border: none; border-radius: 3px;">Delete message</button></form>
+        </div>
+    </div>
+    <br>
+    <br>
+    <% } %>
+    <script src="app.js"></script>
+</body>
+</html>
