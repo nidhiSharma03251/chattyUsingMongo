@@ -27,6 +27,7 @@
         <div style="display: flex; gap: 10px; margin-top: 5px;">
             <form action="chats/<%=chat._id%>/edit"><button style="background:#0F828C; color:white; border: none; border-radius: 3px;">Edit message</button></form>
         <form method="post" action="chats/<%=chat._id%>?_method=DELETE"><button id="deletebtn" style="background:#0F828C; color:white; border: none; border-radius: 3px;">Delete message</button></form>
+        <form method="get" action="/chats/<%=chat._id%>"> <button id="deletebtn" style="background:#0F828C; color:white; border: none; border-radius: 3px;">Show</button></form>
         </div>
     </div>
     <br>
