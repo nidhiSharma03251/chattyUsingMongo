@@ -108,10 +108,10 @@ app.delete("/chats/:id", async(req,res) =>{
     }
 })
 
-app.use((err,req,res,next) =>{
-    console.log(err.name);
-    next(err);    
-})
+// app.use((err,req,res,next) =>{
+//     console.log(err.name);
+//     next(err);    
+// })
 
 app.use((err,req,res,next) =>{
     let { status=500, message= "some error occured"} = err;
